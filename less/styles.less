@@ -1,1 +1,78 @@
-* {}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333;
+}
+
+.align-center { margin: 0 auto; }
+.no-float { float: none !important; }
+
+.header {
+  position: relative;
+  padding: 60px 15px;
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.navbar-fixed-top {
+  background-color: white;
+  border: 0;
+}
+
+.ss-navbar-border {
+  border-style: solid;
+  border-width: 0 0 1px;
+  border-color: #E5E5E5;
+}
+
+.footer-bar {
+  background-color: #343434;
+  border: 0;
+}
+
+.body-bg-color {
+  background-color: #F2F2F2;
+}
+
+.padding-bottom {
+  padding-bottom: 70px;
+}
+
+.lg-font { font-size: 30px; }
+
+.ss-header {
+}
+
+.ss-header-font {
+  display: block;
+  font-size: 30px;
+}
+
+.loopingClass (@index) when (@index > 0) {
+  @tmp: @index * 5px;
+
+  .padding-top@{index} { padding-top: @tmp; }
+  .padding-bottom@{index} { padding-bottom: @tmp; }
+  .padding-left@{index} { padding-left: @tmp; }
+  .padding-right@{index} { padding-right: @tmp; }
+
+  .margin-top@{index} { margin-top: @tmp; }
+  .margin-bottom@{index} { margin-bottom: @tmp; }
+  .margin-left@{index} { margin-left: @tmp; }
+  .margin-right@{index} { margin-right: @tmp; }
+
+  .loopingClass(@index - 1);
+}
+
+@iterations: 12;
+.loopingClass (@iterations);
