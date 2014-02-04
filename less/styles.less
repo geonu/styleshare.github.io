@@ -13,7 +13,10 @@ body {
   color: #333;
 }
 
-.align-center { margin: 0 auto; }
+.align-center {
+  margin: 0 auto;
+  float: none;
+}
 .no-float { float: none !important; }
 
 .header {
@@ -93,6 +96,14 @@ body {
   background-color: white;
 }
 
+.ss-location {
+  height: 490px;
+  background-size: 100%;
+  background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=16&size=640x490&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .loopingClass (@index) when (@index > 0) {
   @tmp: @index * 5px;
   @font: @index * 3px;
@@ -114,6 +125,30 @@ body {
 
 @iterations: 12;
 .loopingClass (@iterations);
+
+@media (max-width: 499px) {
+  .ss-location{
+    height: 640px;
+    background-size: 150%;
+    background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=17&size=640x6400&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
+  }
+}
+
+@media (min-width: 500px) {
+  .ss-location{
+    height: 640px;
+    background-size: auto 100%;
+    background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=17&size=640x6400&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
+  }
+}
+
+@media (min-width: 768px) {
+  .ss-location{
+    height: 390px;
+    background-size: 100%;
+    background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=16&size=640x6400&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
+  }
+}
 
 @media (min-width: 992px) {
   .ss-right { float: right; }
