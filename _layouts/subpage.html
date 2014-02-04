@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+  </head>
+  <body style="position: realtive; padding-top: 50px;">
+
+    {% include nav.html%}
+
+    <div>
+      <div class="col-sm-5 align-center no-float text-center">
+        <span class="ss-header-font padding-top7 padding-bottom8">
+          {{ page.headTitle }}
+        </span>
+      </div>
+    </div>
+
+    <div class="body-bg-color padding-top10 padding-bottom12">
+      <div class="container">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    {% include javascripts.html %}
+
+  </body>
+</html>

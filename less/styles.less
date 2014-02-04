@@ -58,8 +58,25 @@ body {
   font-size: 30px;
 }
 
+.ss-sidebar {
+  top: 70px;
+  left: 15px;
+  width: 100%;
+}
+
+.ss-disappear { display: none; }
+.ss-hidden { visibility: hidden; }
+
+.ss-hashtag {
+  position: absolute;
+  margin-top: -50px;
+}
+
 .loopingClass (@index) when (@index > 0) {
   @tmp: @index * 5px;
+  @font: @index * 3px;
+
+  .fontsize@{index} { font-size: @font; }
 
   .padding-top@{index} { padding-top: @tmp; }
   .padding-bottom@{index} { padding-bottom: @tmp; }
@@ -76,3 +93,8 @@ body {
 
 @iterations: 12;
 .loopingClass (@iterations);
+
+@media (min-width: 992px) {
+  .ss-right { float: right; }
+  .ss-left { float: left; }
+}
