@@ -17,6 +17,15 @@
           }
         });
       }
+    },
+
+    function contentMinHeight() {
+      var windowHeight = $(window).height(),
+      $contentBody = $('.body-bg-color'),
+      contentBodyOffsetTop = $contentBody.offset().top,
+      minHeight = windowHeight - contentBodyOffsetTop - 50;
+
+      $contentBody.css('min-height', minHeight < 0 ? 0 : minHeight);
     }
   ];
 
