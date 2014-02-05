@@ -104,6 +104,33 @@ body {
   background-position: 50% 50%;
 }
 
+.ss-pos-abs { position: absolute; }
+.ss-pos-rel { position: relative; }
+
+.ss-sub-nav {
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  a {
+    white-space: nowrap;
+    color: white;
+
+    &:hover,
+    &:focus { background-color: #262626 !important; }
+  }
+}
+
+.ss-nav-hover {
+  .nav { display: none; }
+
+  &:hover,
+  &:focus {
+    .nav {
+      display: block;
+    }
+  }
+}
+
 .loopingClass (@index) when (@index > 0) {
   @tmp: @index * 5px;
   @font: @index * 3px;
