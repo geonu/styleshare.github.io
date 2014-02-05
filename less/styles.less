@@ -7,6 +7,7 @@
 }
 
 body {
+  padding-top: 50px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
@@ -121,12 +122,12 @@ body {
 }
 
 .ss-nav-hover {
-  .nav { display: none; }
+  .nav { visibility: hidden; }
 
   &:hover,
   &:focus {
     .nav {
-      display: block;
+      visibility: visible;
     }
   }
 }
@@ -146,6 +147,19 @@ body {
   margin-left: 15px;
   padding-left: 15px;
   border-left: 3px solid #CCCCCC;
+}
+
+.ss-mobile-subnav-group {
+  width: 100%;
+  background-color: #262626;
+
+  .ss-mobile-subnav {
+    position: static;
+    li {
+      border-top: 1px solid white;
+      &:first-child { border: 0; }
+    }
+  }
 }
 
 .loopingClass (@index) when (@index > 0) {
@@ -183,6 +197,32 @@ body {
     height: 640px;
     background-size: auto 100%;
     background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=17&size=640x6400&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
+  }
+}
+
+@media (max-width: 767px) {
+  body { padding-top: 0; }
+  .ss-collapse {
+    position: absolute;
+    visibility: hidden;
+  }
+  .navbar-fixed-top { position: static; }
+  .ss-mobile-navbar {
+    display: block;
+
+    .ss-mobile-nav {
+      width: 80%;
+
+      >button {
+        background-color: transparent;
+        border: 0;
+        display: block;
+        width: 25%;
+        padding: 10px 0;
+        color: black;
+        font-weight: bold;
+      }
+    }
   }
 }
 

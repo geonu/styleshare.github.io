@@ -32,6 +32,22 @@
       $('.ss-sub-nav').each(function (i, el) {
         $(el).css('marginLeft', ($(el).width() / 2) * -1);
       });
+    },
+
+    function attachMobileNaveEvent() {
+      var re = new RegExp("MSIE");
+
+      if (re.test(navigator.userAgent)) { return false; }
+
+      $('.ss-mobile-nav button').on('click', function (event) {
+        var $button = $(event.currentTarget),
+        $targetEl = $($button.data('target-id'));
+
+        $targetEl.siblings().each(function (i, el) {
+          $(el).addClass('ss-disappear');
+        });
+        $targetEl.toggleClass('ss-disappear');
+      });
     }
   ];
 

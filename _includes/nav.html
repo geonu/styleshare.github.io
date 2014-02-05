@@ -1,10 +1,10 @@
 <header class="navbar navbar-fixed-top" role="banner">
   <div class="container nav-bg-top">
     <div class="row">
-      <div class="navbar-header">
-        <a href="/" class="navbar-brand">About Icon</a>
-      </div>
-      <nav class="ss-navbar-border clearfix" role="navigation">
+      <nav class="ss-collapse ss-navbar-border clearfix" role="navigation">
+        <div class="nav navbar-nav navbar-left">
+          <a href="/" class="ss-logo">About Icon</a>
+        </div>
 
         <ul class="nav navbar-nav navbar-right">
           <li class="ss-nav-hover">
@@ -64,6 +64,68 @@
             </ul>
           </li>
         </ul>
+      </nav>
+      <nav class="ss-mobile-navbar ss-navbar-border ss-disappear" role="navigation">
+        <div class="text-center">
+          <a href="/" class="ss-logo">About Icon</a>
+        </div>
+        <div class="ss-mobile-nav align-center clearfix">
+          <button href="/about" class="text-center pull-left"
+                  data-target-id="#about">회사소개</button>
+          <button href="/collabo" class="text-center pull-left"
+                  data-target-id="#collabo">제휴안내</button>
+          <button href="/press" class="text-center pull-left"
+                  data-target-id="#press">프레스</button>
+          <button href="/faq" class="text-center pull-left"
+                  data-target-id="#help">고객센터</button>
+        </div>
+
+        <div class="ss-mobile-subnav-group">
+          <ul id="about" class="nav ss-mobile-subnav ss-disappear">
+            <li>
+              <a href="/about">서비스 소개</a>
+            </li>
+            <li>
+              <a href="/vision">우리의 비젼 &  걸어온 길</a>
+            </li>
+            <li>
+              <a href="/team">StyleShare를 만드는 사람들</a>
+            </li>
+            <li>
+              <a href="/recuruit">함께해요: 채용안내</a>
+            </li>
+            <li>
+              <a href="/contact">연락하기</a>
+            </li>
+          </ul>
+
+          <ul id="collabo" class="nav ss-mobile-subnav ss-disappear">
+            <li>
+              <a href="/collabo">광고 / 프로모션 제안</a>
+            </li>
+            <li>
+              <a href="/sale">StyleShare에서 판매하기</a>
+            </li>
+          </ul>
+
+          <ul id="press" class="nav ss-mobile-subnav ss-disappear">
+            <li>
+              <a href="/press">언론 속의 StyleShare</a>
+            </li>
+            <li>
+              <a href="/presskit">프레스킷</a>
+            </li>
+          </ul>
+
+          <ul id="help" class="nav ss-mobile-subnav ss-disappear">
+            <li>
+              <a href="/faq">FAQ</a>
+            </li>
+            <li>
+              <a href="/feedback">피드백 보내기</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </div>
