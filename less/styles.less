@@ -10,9 +10,20 @@ body {
   padding-top: 50px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
-  line-height: 1.428571429;
   color: #333;
+  line-height: 1.428571429;
+  letter-spacing: -0.2px;
 }
+
+a:link {
+  text-decoration: none;
+  color: #047acc;
+}
+a:hover {
+  text-decoration: underline;
+  color: #047acc;
+}
+
 
 .ss-retina-img { width: 50%; }
 
@@ -233,6 +244,31 @@ body {
   margin: 0;
   padding: 20px 0;
 }
+
+.app-image {
+  max-width: 360px;
+  max-height: 375px;
+  width: 100%;
+}
+
+.ss-index-header {
+  font-size: 24px;
+}
+
+.ss-word-wrap {
+  span { white-space: nowrap; }
+}
+
+.ss-font-xl { font-size: 30px; }
+.ss-font-lg { font-size: 24px; }
+.ss-font-md { font-size: 18px; }
+.ss-font-sm { font-size: 16px; }
+
+.ss-font-bold { font-weight: bold; }
+
+.ss-font-black { color: black; }
+.ss-font-white { color: white; }
+.ss-font-gray { color: #999999; }
 
 .loopingClass (@index) when (@index > 0) {
   @tmp: @index * 5px;
