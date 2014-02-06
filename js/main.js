@@ -28,12 +28,6 @@
       $contentBody.css('min-height', minHeight < 0 ? 0 : minHeight);
     },
 
-    function alignSubNav() {
-      $('.ss-sub-nav').each(function (i, el) {
-        $(el).css('marginLeft', ($(el).width() / 2) * -1);
-      });
-    },
-
     function attachMobileNaveEvent() {
       var re = new RegExp("MSIE");
 
