@@ -178,7 +178,7 @@ a:hover {
 .ss-send-email {
   width: 100%;
   display: block;
-  color: white;
+  color: white !important;
   padding: 15px 0;
   background-color: #00A688;
   border-radius: 5px;
@@ -333,6 +333,8 @@ a:hover {
   margin-bottom: 10px;
   overflow: hidden;
 }
+
+.ss-indent { overflow: hidden; }
 
 .loopingClass (@index) when (@index >= 0) {
   @tmp: @index * 5px;
