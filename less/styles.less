@@ -75,16 +75,21 @@ a:hover {
   top: 70px;
   margin-left: -15px;
   margin-right: -15px;
-  padding: 0 15px;
+  padding: 0 10px;
   background-color: white;
 
-  .navbar {
+  ul {
     margin: 0;
     border: 0;
 
     li {
       &:first-child { border: 0; }
       border-top: 1px solid #E5E5E5;
+
+      a {
+        color: #333;
+        padding: 15px;
+      }
     }
   }
 
@@ -95,7 +100,9 @@ a:hover {
 
 .ss-hashtag {
   position: absolute;
-  margin-top: -50px;
+  margin-top: -60px;
+
+  &:not(:first-child) { margin-top: -10px; }
 }
 
 .ss-team-image {
@@ -304,6 +311,29 @@ a:hover {
 .ss-width100 { width: 100%; }
 .ss-height100 { height: 100%; }
 
+.ss-no-list-style {
+  padding-left: 0;
+  li { list-style: none;}
+  p { margin: 0; }
+}
+
+.ss-history-list {
+  li { margin-bottom: 5px; }
+}
+
+.ss-history-date {
+  width: 70px;
+  float: left;
+  &.ss-empty-date {
+    height: 1px;
+  }
+}
+
+.ss-history-body {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
 .loopingClass (@index) when (@index >= 0) {
   @tmp: @index * 5px;
   @font: @index * 3px;
@@ -391,6 +421,27 @@ a:hover {
         color: black;
         font-weight: bold;
       }
+    }
+  }
+
+  .ss-history-list {
+    li { margin: 0; }
+    p { margin-bottom: 0; }
+  }
+  .ss-history-date {
+    margin-bottom: 5px;
+    float: none;
+
+    &.ss-empty-date { margin: 0; }
+  }
+  .ss-history-body {
+    padding-left: 20px;
+    margin: 0;
+
+    &:before {
+      content: "-";
+      position: absolute;
+      margin-left: -11px
     }
   }
 }
