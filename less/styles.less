@@ -336,6 +336,13 @@ a:hover {
 
 .ss-indent { overflow: hidden; }
 
+.ss-press-link {
+  margin-bottom: 50px;
+  a:extend(.ss-emphasis) { color: #333; }
+  span:extend(.ss-emphasis) { color: #333; }
+  p { margin-bottom: 0; }
+}
+
 .loopingClass (@index) when (@index >= 0) {
   @tmp: @index * 5px;
   @font: @index * 3px;
