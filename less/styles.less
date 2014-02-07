@@ -7,7 +7,7 @@
 }
 
 body {
-  padding-top: 50px;
+  padding-top: 60px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   color: #333;
@@ -19,6 +19,7 @@ a:link {
   text-decoration: none;
   color: #047acc;
 }
+
 a:hover {
   text-decoration: underline;
   color: #047acc;
@@ -270,7 +271,31 @@ a:hover {
 .ss-font-white { color: white; }
 .ss-font-gray { color: #999999; }
 
-.loopingClass (@index) when (@index > 0) {
+.ss-title {
+  &:extend(.ss-font-xl);
+}
+
+.ss-header {
+  &:extend(.ss-font-lg);
+  &:extend(.ss-font-black);
+}
+
+.ss-emphasis {
+  &:extend(.ss-font-md);
+  &:extend(.ss-font-black);
+}
+
+.ss-note {
+  &:extend(.ss-font-gray);
+}
+
+.ss-clear { clear: both; }
+
+.ss-block { display: block; }
+.ss-width100 { width: 100%; }
+.ss-height100 { height: 100%; }
+
+.loopingClass (@index) when (@index >= 0) {
   @tmp: @index * 5px;
   @font: @index * 3px;
 
