@@ -8,11 +8,11 @@
 
 body {
   padding-top: 60px;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "PT sans", "Nanum Gothic", "NanumGothic", "Nanum Gothic Regular", "NanumGothicRegular", sans-serif;
   font-size: 14px;
   color: #333;
   line-height: 1.428571429;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.6px;
 }
 
 a:link {
@@ -280,6 +280,7 @@ a:hover {
 .ss-font-lg { font-size: 24px; }
 .ss-font-md { font-size: 18px; }
 .ss-font-sm { font-size: 16px; }
+.ss-font-xs { font-size: 12px; }
 
 .ss-font-bold { font-weight: bold; }
 
@@ -342,6 +343,47 @@ a:hover {
   span:extend(.ss-emphasis) { color: #333; }
   p { margin-bottom: 0; }
 }
+
+.ss-team-thumbnail {
+  margin-top: 30px;
+}
+
+.ss-member-image {
+  width: 70px;
+  height: 70px;
+  margin-top: 12px;
+  margin-right: 16px;
+}
+
+.ss-member-description {
+  margin-top: -3px;
+}
+
+.ss-balloon {
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  background-color: white;
+
+  .ss-balloon-head,
+  .ss-balloon-tail {
+    position: absolute;
+    height: 50px;
+  }
+  .ss-balloon-head { right: 0; }
+  .ss-balloon-tail { left: 0; }
+  .ss-balloon-body {
+    position: absolute;
+    top: 5px;
+    right: 1px;
+    bottom: 5px;
+    left: 11px;
+    line-height: 40px;
+    font-size: 12px;
+  }
+}
+
+.ss-press-kit-img { height: 220px; }
 
 .loopingClass (@index) when (@index >= 0) {
   @tmp: @index * 5px;
@@ -461,7 +503,6 @@ a:hover {
     background-size: 100%;
     background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=16&size=640x6400&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
   }
-
   .ss-mobile-left { float: left; }
   .ss-mobile-right { float: right; }
 }
