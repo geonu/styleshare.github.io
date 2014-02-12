@@ -23,7 +23,11 @@
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
 <!--><![endif]-->
 
-<link rel="stylesheet" type="text/css" href="/css/styles.css">
+{% if site.env == 'prod' %}
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+{% else %}
+  <link rel="stylesheet/less" type="text/css" href="/less/styles.less">
+{% endif %}
 
 <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" href="/ico/icon.png">
