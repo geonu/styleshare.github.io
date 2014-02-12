@@ -370,6 +370,17 @@ a:hover {
   overflow: hidden;
   background-color: white;
 
+  table {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    td {
+      text-align: center;
+      padding: 0 10px 0 20px;
+    }
+  }
+
   .ss-balloon-head,
   .ss-balloon-tail {
     position: absolute;
@@ -378,13 +389,10 @@ a:hover {
   .ss-balloon-head { right: 0; }
   .ss-balloon-tail { left: 0; }
   .ss-balloon-body {
-    position: absolute;
-    top: 5px;
-    right: 1px;
-    bottom: 5px;
-    left: 11px;
-    line-height: 40px;
     font-size: 12px;
+
+    &:before { content: '"';}
+    &:after { content: '"';}
   }
 }
 
