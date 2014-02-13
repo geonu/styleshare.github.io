@@ -49,6 +49,9 @@ a:hover {
 .body-bg-color {
   background-color: #F2F2F2;
 }
+.ss-content-body {
+  padding: 50px 0 60px;
+}
 .padding-bottom {
   padding-bottom: 70px;
 }
@@ -63,7 +66,6 @@ a:hover {
   top: 70px;
   margin-left: -15px;
   margin-right: -15px;
-  padding: 10px;
   background-color: white;
 }
 .ss-sidebar ul {
@@ -79,6 +81,9 @@ a:hover {
 .ss-sidebar ul li a {
   color: #333;
   padding: 15px;
+}
+.ss-sidebar ul li a:hover {
+  background-color: #FAFAFA;
 }
 .ss-disappear {
   display: none;
@@ -117,13 +122,16 @@ a:hover {
   width: 180px;
   left: 60px;
   margin-left: -90px;
-  border-top: 1px solid transparent;
+  border-top: 1px solid #E5E5E5;
 }
 .ss-sub-nav li {
   border-top: 1px solid #4D4D4D;
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;
   background-color: rgba(51, 51, 51, 0.98);
+}
+.ss-sub-nav li:first-child {
+  border-top: 0;
 }
 .ss-sub-nav a {
   color: white;
@@ -201,7 +209,8 @@ a:hover {
 }
 .ss-mobile-subnav-group .ss-mobile-subnav li a {
   color: white;
-  font-size: 12px;
+  font-size: 13px;
+  padding: 14px 0;
   text-align: center;
 }
 .ss-mobile-subnav-group .ss-mobile-subnav li a:hover {
@@ -773,6 +782,11 @@ a:hover {
     background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=17&size=640x6400&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
   }
 }
+@media (min-width: 500px) and (max-width: 767px) {
+  .ss-copyright-bottom {
+    padding: 20px  10px;
+  }
+}
 @media (max-width: 767px) {
   body {
     padding-top: 0;
@@ -807,7 +821,7 @@ a:hover {
     display: block;
   }
   .ss-mobile-navbar .ss-mobile-nav {
-    width: 80%;
+    width: 94%;
   }
   .ss-mobile-navbar .ss-mobile-nav > button {
     background-color: transparent;
@@ -875,5 +889,10 @@ a:hover {
 @media (min-width: 1200px) {
   .ss-affix {
     width: 380px;
+  }
+}
+@media (max-width: 991px) {
+  .ss-content-body {
+    padding: 22px 0 45px;
   }
 }
