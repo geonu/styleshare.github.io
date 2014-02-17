@@ -10,7 +10,7 @@
       if ($sidebar.length) {
         sidebarOffsetTop = $sidebar.offset().top;
         $(window).on('scroll', function () {
-          if ($(window).scrollTop() >= sidebarOffsetTop - 70) {
+          if ($(window).scrollTop() >= sidebarOffsetTop - 84) {
             $sidebar.addClass('ss-affix');
           } else {
             $sidebar.removeClass('ss-affix');

@@ -8,21 +8,27 @@
 
 body {
   padding-top: 60px;
-  font-family: "PT sans", "Nanum Gothic", "NanumGothic", "Nanum Gothic Regular", "NanumGothicRegular", sans-serif;
+  font-family: "PT sans", "Apple SD Gothic Neo", "Nanum Gothic", "NanumGothic", "Nanum Gothic Regular", "NanumGothicRegular", sans-serif;
   font-size: 14px;
   color: #333;
-  line-height: 1.428571429;
+  line-height: 1.56;
   letter-spacing: -0.6px;
 }
 
-a:link {
-  text-decoration: none;
-  color: #047acc;
-}
+a {
+  outline: none;
 
-a:hover {
-  text-decoration: underline;
-  color: #047acc;
+  &:link,
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+
+  &:link,
+  &:hover {
+    text-decoration: none;
+    color: #047acc;
+  }
 }
 
 .align-center {
@@ -35,6 +41,11 @@ a:hover {
   position: relative;
   padding: 60px 15px;
   overflow: hidden;
+}
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+  background-color: transparent;
 }
 
 .navbar-fixed-top {
@@ -71,7 +82,7 @@ a:hover {
 }
 
 .ss-sidebar {
-  top: 70px;
+  top: 84px;
   margin-left: -15px;
   margin-right: -15px;
   background-color: white;
@@ -86,7 +97,7 @@ a:hover {
 
       a {
         color: #333;
-        padding: 15px;
+        padding: 13px 15px;
 
         &:hover {
           background-color: #FAFAFA;
@@ -145,7 +156,7 @@ a:hover {
   a {
     color: white;
     font-size: 12px;
-    padding: 10px 0 !important;
+    padding: 12px 0 !important;
     text-align: center;
 
     &:hover,
@@ -194,6 +205,10 @@ a:hover {
   padding: 15px 0;
   background-color: #00A688;
   border-radius: 5px;
+
+  &:hover {
+    background-color: #0D7F73;
+  }
 }
 
 .ss-answer {
@@ -270,7 +285,7 @@ a:hover {
 .ss-copyright { max-width: 420px; }
 .ss-copyright-mobile { width: 228px; }
 .ss-copyright-bottom {
-  color: white;
+  color: #E2E2E2;
   margin: 0;
   padding: 20px 0;
 }
@@ -406,6 +421,8 @@ a:hover {
 
 .ss-press-kit-img { height: 220px; }
 
+.ss-subpage-title { padding: 35px 0 40px; }
+
 .loopingClass (@index) when (@index >= 0) {
   @tmp: @index * 5px;
   @font: @index * 3px;
@@ -459,6 +476,10 @@ a:hover {
 @media (max-width: 767px) {
   body { padding-top: 0; }
   .header { padding: 39px 0; }
+  .ss-subpage-title {
+    font-size: 24px;
+    padding: 22px 0 20px;
+  }
 
   .ss-mobile-left { float: left; }
   .ss-mobile-right { float: right; }
@@ -495,7 +516,6 @@ a:hover {
         width: 25%;
         padding: 10px 0;
         color: black;
-        font-weight: bold;
       }
     }
   }
