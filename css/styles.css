@@ -114,13 +114,7 @@ a:hover {
 .ss-team-contact {
   background-color: white;
 }
-.ss-location {
-  height: 490px;
-  background-size: 100%;
-  background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=16&size=640x490&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
+.ss-location { height: 490px; }
 .ss-pos-abs {
   position: absolute;
 }
@@ -781,20 +775,12 @@ a:hover {
     float: none !important;
   }
   .ss-location {
-    height: 640px;
-    background-size: 150%;
-    background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=17&size=640x6400&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
+    height: 320px;
+    margin: 0 15px;
   }
   .ss-sns-link-group {
     float: none !important;
     margin: 0 auto;
-  }
-}
-@media (min-width: 500px) {
-  .ss-location {
-    height: 640px;
-    background-size: auto 100%;
-    background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=17&size=640x6400&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
   }
 }
 @media (min-width: 500px) and (max-width: 767px) {
@@ -874,11 +860,6 @@ a:hover {
   }
 }
 @media (min-width: 768px) {
-  .ss-location {
-    height: 390px;
-    background-size: 100%;
-    background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=16&size=640x6400&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
-  }
   .ss-mobile-left {
     float: left;
   }
