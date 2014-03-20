@@ -17,7 +17,8 @@
       </div>
       <p class="ss-copyright-bottom pull-left">Copyright Styleshare. All Rights Reserved.</p>
       <p class="ss-copyright-bottom pull-left margin-left3">
-        <a href="/en{{ page.url | replace: '/index.html', '/' }}">Translate to english</a>
+      <a href="{{ page.path | replace: '/index.html', '/' | replace: 'en', '' }}">
+        한국어로 보기</a>
       </p>
     </div>
   </div>
