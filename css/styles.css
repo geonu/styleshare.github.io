@@ -114,7 +114,13 @@ a:hover {
 .ss-team-contact {
   background-color: white;
 }
-.ss-location { height: 490px; }
+.ss-location {
+  height: 490px;
+  background-size: 100%;
+  background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=16&size=640x490&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
 .ss-pos-abs {
   position: absolute;
 }
@@ -364,53 +370,6 @@ a:hover {
 }
 .ss-press-link p {
   margin-bottom: 0;
-}
-.ss-team-thumbnail {
-  margin-top: 30px;
-}
-.ss-member-image {
-  width: 70px;
-  height: 70px;
-  margin-top: 12px;
-  margin-right: 16px;
-}
-.ss-member-description {
-  margin-top: -3px;
-}
-.ss-balloon {
-  position: relative;
-  height: 50px;
-  overflow: hidden;
-  background-color: white;
-}
-.ss-balloon table {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.ss-balloon table td {
-  text-align: center;
-  padding: 0 10px 0 20px;
-}
-.ss-balloon .ss-balloon-head,
-.ss-balloon .ss-balloon-tail {
-  position: absolute;
-  height: 50px;
-}
-.ss-balloon .ss-balloon-head {
-  right: 0;
-}
-.ss-balloon .ss-balloon-tail {
-  left: 0;
-}
-.ss-balloon .ss-balloon-body {
-  font-size: 12px;
-}
-.ss-balloon .ss-balloon-body:before {
-  content: '"';
-}
-.ss-balloon .ss-balloon-body:after {
-  content: '"';
 }
 .ss-press-kit-img {
   height: 220px;
@@ -775,12 +734,20 @@ a:hover {
     float: none !important;
   }
   .ss-location {
-    height: 320px;
-    margin: 0 15px;
+    height: 640px;
+    background-size: 150%;
+    background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=17&size=640x6400&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
   }
   .ss-sns-link-group {
     float: none !important;
     margin: 0 auto;
+  }
+}
+@media (min-width: 500px) {
+  .ss-location {
+    height: 640px;
+    background-size: auto 100%;
+    background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=17&size=640x6400&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
   }
 }
 @media (min-width: 500px) and (max-width: 767px) {
@@ -860,6 +827,11 @@ a:hover {
   }
 }
 @media (min-width: 768px) {
+  .ss-location {
+    height: 390px;
+    background-size: 100%;
+    background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=&zoom=16&size=640x6400&markers=color:black%7Clabel:S%7C37.52442,127.029864&sensor=false&scale=2');
+  }
   .ss-mobile-left {
     float: left;
   }
@@ -894,4 +866,87 @@ a:hover {
   .ss-content-body {
     padding: 22px 0 45px;
   }
+}
+.ss-team-wrapper {
+  margin-top: 30px;
+}
+.ss-team-wrapper .ss-team {
+  margin-top: 24px;
+}
+.ss-team-wrapper .ss-team:first-child {
+  margin-top: 0;
+}
+.ss-team-wrapper .ss-team .ss-team-name,
+.ss-team-wrapper .ss-team .ss-team-member {
+  margin: 0;
+  padding-left: 18px;
+  padding-right: 18px;
+  background-color: white;
+}
+.ss-team-wrapper .ss-team .ss-team-name {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 16px;
+  color: #464646;
+}
+@media (max-width: 767px) {
+  .ss-team-wrapper .ss-team .ss-team-name {
+    text-align: center;
+  }
+}
+.ss-team-wrapper .ss-team .ss-team-member {
+  margin-top: 2px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.ss-team-wrapper .ss-team .ss-team-member:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+@media (max-width: 767px) {
+  .ss-team-wrapper .ss-team .ss-team-member {
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.ss-team-wrapper .ss-team .ss-team-member .ss-member-image {
+  float: left;
+  width: 100px;
+}
+@media (max-width: 767px) {
+  .ss-team-wrapper .ss-team .ss-team-member .ss-member-image {
+    float: none;
+    width: 100%;
+  }
+}
+.ss-team-wrapper .ss-team .ss-team-member .ss-member-information-wrapper {
+  height: 100px;
+  display: table;
+  padding-left: 16px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .ss-team-wrapper .ss-team .ss-team-member .ss-member-information-wrapper {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+.ss-team-wrapper .ss-team .ss-team-member .ss-member-information-wrapper .ss-member-information {
+  display: table-cell;
+  vertical-align: middle;
+}
+.ss-team-wrapper .ss-team .ss-team-member .ss-member-name {
+  font-size: 18px;
+  color: black;
+}
+.ss-team-wrapper .ss-team .ss-team-member .ss-member-title {
+  font-size: 14px;
+  color: #4c4c4c;
+}
+.ss-team-wrapper .ss-team .ss-team-member .ss-member-description {
+  margin-top: 12px;
+  margin-bottom: 0;
+  font-size: 13px;
+  color: #333;
 }

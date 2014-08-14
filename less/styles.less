@@ -372,53 +372,6 @@ a {
   p { margin-bottom: 0; }
 }
 
-.ss-team-thumbnail {
-  margin-top: 30px;
-}
-
-.ss-member-image {
-  width: 70px;
-  height: 70px;
-  margin-top: 12px;
-  margin-right: 16px;
-}
-
-.ss-member-description {
-  margin-top: -3px;
-}
-
-.ss-balloon {
-  position: relative;
-  height: 50px;
-  overflow: hidden;
-  background-color: white;
-
-  table {
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    td {
-      text-align: center;
-      padding: 0 10px 0 20px;
-    }
-  }
-
-  .ss-balloon-head,
-  .ss-balloon-tail {
-    position: absolute;
-    height: 50px;
-  }
-  .ss-balloon-head { right: 0; }
-  .ss-balloon-tail { left: 0; }
-  .ss-balloon-body {
-    font-size: 12px;
-
-    &:before { content: '"';}
-    &:after { content: '"';}
-  }
-}
-
 .ss-press-kit-img { height: 220px; }
 
 .ss-subpage-title { padding: 35px 0 40px; }
@@ -570,4 +523,98 @@ a {
 
 @media (max-width: 991px) {
   .ss-content-body { padding: 22px 0 45px; }
+}
+
+.ss-team-wrapper {
+  margin-top: 30px;
+
+  .ss-team {
+    margin-top: 24px;
+
+    &:first-child { margin-top: 0; }
+
+    .ss-team-name,
+    .ss-team-member {
+      margin: 0;
+      padding-left: 18px;
+      padding-right: 18px;
+
+      background-color: white;
+    }
+
+    .ss-team-name {
+      padding-top: 16px;
+      padding-bottom: 16px;
+
+      font-size: 16px;
+      color: #464646;
+
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+    }
+
+    .ss-team-member {
+      margin-top: 2px;
+      padding-top: 18px;
+      padding-bottom: 18px;
+
+      &:first-child {
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      @media (max-width: 767px) {
+        margin-top: 0;
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+
+      .ss-member-image {
+        float: left;
+        width: 100px;
+
+        @media (max-width: 767px) {
+          float: none;
+          width: 100%;
+        }
+      }
+
+      .ss-member-information-wrapper {
+        height: 100px;
+        display: table;
+        padding-left: 16px;
+
+        overflow: hidden;
+
+        @media (max-width: 767px) {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+
+        .ss-member-information {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+
+      .ss-member-name {
+        font-size: 18px;
+        color: black;
+      }
+
+      .ss-member-title {
+        font-size: 14px;
+        color: #4c4c4c;
+      }
+
+      .ss-member-description {
+        margin-top: 12px;
+        margin-bottom: 0;
+
+        font-size: 13px;
+        color: #333;
+      }
+    }
+  }
 }
