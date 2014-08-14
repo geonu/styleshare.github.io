@@ -1,0 +1,83 @@
+.sprite {
+    background-image: url(/img/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.fofoman {
+    width: 100px;
+    height: 100px;
+    background-position: 0 0;
+}
+
+.imsearch {
+    width: 100px;
+    height: 100px;
+    background-position: -100px 0;
+}
+
+.jaeyoung {
+    width: 100px;
+    height: 100px;
+    background-position: -200px 0;
+}
+
+.danchu {
+    width: 100px;
+    height: 100px;
+    background-position: -300px 0;
+}
+
+.jay {
+    width: 100px;
+    height: 100px;
+    background-position: -400px 0;
+}
+
+.yoloseem {
+    width: 100px;
+    height: 100px;
+    background-position: -500px 0;
+}
+
+.geonu {
+    width: 100px;
+    height: 100px;
+    background-position: -600px 0;
+}
+
+.binalee {
+    width: 100px;
+    height: 100px;
+    background-position: -700px 0;
+}
+
+.boming {
+    width: 100px;
+    height: 100px;
+    background-position: -800px 0;
+}
+
+.eden {
+    width: 100px;
+    height: 100px;
+    background-position: -900px 0;
+}
+
+.devxoul {
+    width: 100px;
+    height: 100px;
+    background-position: -1000px 0;
+}
+
+.everymoment {
+    width: 100px;
+    height: 100px;
+    background-position: -1100px 0;
+}
+
+.shy {
+    width: 100px;
+    height: 100px;
+    background-position: -1200px 0;
+}
