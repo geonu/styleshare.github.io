@@ -572,11 +572,19 @@ a {
 
       .ss-member-image {
         float: left;
-        width: 100px;
 
         @media (max-width: 767px) {
           float: none;
           width: 100%;
+          height: auto;
+        }
+
+        .ss-member-thumbnail {
+          display: none;
+          @media (max-width: 767px) {
+            width: 100%;
+            display: block;
+          }
         }
       }
 

@@ -906,18 +906,27 @@ a:hover {
 @media (max-width: 767px) {
   .ss-team-wrapper .ss-team .ss-team-member {
     margin-top: 0;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 2px;
+    padding-right: 2px;
   }
 }
 .ss-team-wrapper .ss-team .ss-team-member .ss-member-image {
   float: left;
-  width: 100px;
 }
 @media (max-width: 767px) {
   .ss-team-wrapper .ss-team .ss-team-member .ss-member-image {
     float: none;
     width: 100%;
+    height: auto;
+  }
+}
+.ss-team-wrapper .ss-team .ss-team-member .ss-member-image .ss-member-thumbnail {
+  display: none;
+}
+@media (max-width: 767px) {
+  .ss-team-wrapper .ss-team .ss-team-member .ss-member-image .ss-member-thumbnail {
+    width: 100%;
+    display: block;
   }
 }
 .ss-team-wrapper .ss-team .ss-team-member .ss-member-information-wrapper {
@@ -928,8 +937,8 @@ a:hover {
 }
 @media (max-width: 767px) {
   .ss-team-wrapper .ss-team .ss-team-member .ss-member-information-wrapper {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 .ss-team-wrapper .ss-team .ss-team-member .ss-member-information-wrapper .ss-member-information {
